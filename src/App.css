@@ -10,13 +10,13 @@
   display: grid;
   grid-template-columns: repeat(11, 80px);
   grid-template-rows: repeat(8, 80px);
-  gap: 30px; /* Increased to 30px for more spacing between cells */
+  gap: 30px;
   position: relative;
 }
 
 .cell {
-  background-color: transparent; /* Removed the fill */
-  border: 1px solid #969696; /* Grey stroke */
+  background-color: transparent;
+  border: 1px solid #969696;
   color: #969696;
   display: flex;
   justify-content: center;
@@ -24,6 +24,7 @@
   font-family: 'Permanent Marker', cursive;
   font-size: 64px;
   position: relative;
+  transition: opacity 0.05s ease-out;
 }
 
 .number {
@@ -33,4 +34,31 @@
   font-size: 18px;
   font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
   color: #00ff00;
+}
+
+/* Only dim cells when hovering over any cell */
+.crossword .cell:hover ~ .cell,
+.crossword .cell:has(~ .cell:hover) {
+  opacity: 0.3;
+}
+
+/* Word hover states */
+.lucascorrea:hover ~ .lucascorrea,
+.lucascorrea:has(~ .lucascorrea:hover) {
+  opacity: 1 !important;
+}
+
+.sobre:hover ~ .sobre,
+.sobre:has(~ .sobre:hover) {
+  opacity: 1 !important;
+}
+
+.projeto:hover ~ .projeto,
+.projeto:has(~ .projeto:hover) {
+  opacity: 1 !important;
+}
+
+.cell:hover {
+  opacity: 1 !important;
+  cursor: pointer;
 }
