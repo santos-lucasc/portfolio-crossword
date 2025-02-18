@@ -5,6 +5,11 @@ function App() {
   return (
     <div className="app">
       <div className="crossword">
+        {/* Logo positioned in its own container */}
+        <div className="logo-wrapper" style={{ gridRow: 1, gridColumn: 1 }}>
+          <img src="logo_lcs.svg" alt="LCS Logo" className="logo" />
+        </div>
+
         {/* LUCAS CORREA (horizontal) */}
         <div className="cell lucascorrea" style={{ gridRow: 3, gridColumn: 1 }}>
           <span className="number">1</span>
