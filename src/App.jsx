@@ -92,6 +92,47 @@ function App() {
              style={{ gridRow: 8, gridColumn: 7 }}>O</div>
 
         {/* Text containers */}
+        <div className={`ascii-art ${activeWord === 'sobre' ? 'visible' : ''}`}>
+{`                                 ..:..                                  
+                            .      ...:;.                               
+                            .      ..:..;;                              
+                           . :::::::;++:;++                             
+                           .:;;+;:..:;XX+;+:                            
+                           :+;:;++::;x$$X+;:                            
+                           ;;;;;xx:;;+xX$x;:                            
+                           ;+;:x:+:;+xX$$xx;                            
+                           ;;;;;;+;;+X$&$+x;                            
+                           ;;;;;+x;;xX$$xX+                             
+                           ;+;;;+xxXX$$X;$                             
+                        ;;xXX;;;;+XXx+;;:X&&X                           
+                    :xXxxXX$X;;;:;+;:::;X&$$$XXX;                       
+                  +XXXXxXXx$$X:;;;;;;+xX$$X$xxxxX$X                     
+                 X$XXXXXxxX$$X+:;;;XX$$X+X&XxxxxxX$&X                   
+                ;$$XXXXXXXxX$$X:+XX$$XxXxxxxXxxXxX$$&X+                 
+                $$XXXXXXXXXXXX$$$$XXxxxxxxXXXXXXx$XX$$$.                
+               X$$XXXXXXXXXXX$X$XXXXXXxXXXXXxXXxX$Xx$$$&                
+              x$$$$$XXXXXXXX$X$XXXXXXXxXXXXxXXXxXXXXX$X&X               
+             x$X$XXXXXXXXXXX$$XXXXXXXXXXXXXXXXXX$XXx$XX&&X              
+            :X$XXXXXXXXXXXX$$$XXXXXXXXXXXXXXXX$XXXx$$xX$&$              
+            xXXXXXXXXXXXXX$$XXXXXXXXXXXXXX$$$$X$XXXXX$XX$&;             
+            x$XXXXXXXXXXXX$$$XXXXXXXXXXXX$$$&&X$xxX$$XXX$&$             
+              :+XXXX$XXXXX$XXXXXXXXXX$XXX$&&&$$xxxXXXXXXX&&.            
+              :::+XXXXXXX$$XXXXXXXXX$XxXXX&&&XXxxxXXXXXXX$&X            
+             .:::;$XXXXXX$XXXXXXXXXX&XXXX$$$X++xxxxxXXXXX$&&            
+             :::::XXXXXX$XXXXXXXXXXX&$XXX$$X+$$xxxXXxxXXXX&&:           
+             :::.:XXXXX$$XXXXXXXXXXX&&$XXX&XxX&XXXXXXXXXX$&&x           
+             ::..;XXXXX$$XXXXXXXXXXX&&&$$XX&$x+::;++xxXX:.              
+             ::..+XXXX$$$XXXXXXXXXXX$&&&$XXXXX+$;:::;;x.                
+            .::..+XXXX$$$XXXXXXXXXX$$&&&$XXXxx;;::::;+X                 
+            .:..xXXXXX$X$XXXXXXXXXX$$$$&$XXx+;::::::;xX                 
+            ::.+XXXXX$$$XXXXXXXXXX$$$&&$$$XX+;:::::;+X+                 
+            ;XXXXXXXX$$$$XXXXXXXX$$$&&&$$XXx+;:::::;xx                  
+            xXX+XXXXX$$XXXXXXXXXX$$&&&$$$$Xx;;::::;+X+                  
+            xxxxXXXXX$XXXXXXXXXX$$$&&$$$$X;;;.:::;;x+                   
+            xxxXXXXXX$$$XXXXXXXX$$$$$$XxxXx;:.:::;xx                    
+           ;xXXx$$XXX$$$XXXXXXXX$$$$$$$Xx++x..::;+x                     
+           .xXxxX$XX$&$XXXXXXXXX$$XXXxxxxX$$x.::+x                      `}
+</div>
         <div className={`hover-text lucascorrea-text ${activeWord === 'lucas' ? 'visible' : ''}`}>
           Designer de 27 anos que mora<br />
           atualmente no Rio de Janeiro e fez<br />
@@ -99,12 +140,12 @@ function App() {
         </div>
         <div className={`hover-text sobre-text ${activeWord === 'sobre' ? 'visible' : ''}`}>
           <div className="social-links">
-            <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
-            <a href="https://openprocessing.org" target="_blank" rel="noopener noreferrer">OpenProcessing</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">Linkedin</a>
+            <a href="https://www.behance.net/santos-lucasc" target="_blank" rel="noopener noreferrer">Behance</a>
+            <a href="https://openprocessing.org/user/269230" target="_blank" rel="noopener noreferrer">OpenProcessing</a>
+            <a href="https://instagram.com/lu________cas/" target="_blank" rel="noopener noreferrer">Instagram</a>
           </div>
           <div className="about-content">
-            <p>Designer multidisciplinar apaixonado por aprender e explorar. Formado pela ESPM-RJ, onde tive a oportunidade de ser bolsista do CNPQ. Possui interesse em design generativo e identidades visuais dinâmicas, além de pesquisa e interação. Muito antes de tudo isso desenvolvi uma paixão pela web e suas possibilidades que venho tentando nutrir com a minha carreira profissional.</p>
+            <p>Me chamo Lucas, sou apaixonado por aprender e explorar. Formado pela ESPM-RJ, onde tive a oportunidade de ser bolsista do CNPQ. Possuo interesse em design generativo e identidades visuais dinâmicas, além de pesquisa e interação. Muito antes de tudo isso desenvolvi uma paixão pela web e suas possibilidades que venho tentando nutrir com a minha carreira profissional.</p>
             <p className="experience">Experiência com o Pacote Adobe, Figma, Wordpress (ACF, Elementor); HTML/CSS/Javascript; p5.js e muitas outras ferramentas que me apaixonei em futucar e meter a cara.</p>
           </div>
         </div>
