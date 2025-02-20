@@ -24,7 +24,7 @@
   font-family: 'Averia Serif Libre', serif;
   font-size: 64px;
   position: relative;
-  transition: opacity 0.05s ease-out;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .number {
@@ -40,7 +40,7 @@
 .logo-wrapper {
   width: 80px;
   height: 80px;
-  transform: translateY(0px); /* Changed from -120px to -100px */
+  transform: translateY(0px);
 }
 
 .logo {
@@ -49,29 +49,115 @@
   object-fit: contain;
 }
 
-/* Hover states */
-.crossword .cell:hover ~ .cell,
-.crossword .cell:has(~ .cell:hover) {
+/* Text styles */
+.hover-text {
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #969696;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+  line-height: 1.5;
+  pointer-events: none;
+}
+
+.hover-text.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.lucascorrea-text {
+  top: 420px;
+  left: 0;
+  transform: translateY(10px);
+}
+
+.sobre-text {
+  top: 0;
+  right: -100px;
+  width: 600px;
+  transform: translateY(10px);
+}
+
+.social-links {
+  margin-bottom: 40px;
+  text-align: right;
+}
+
+.social-links a {
+  color: #969696;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
+.about-content {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+}
+
+.about-content .experience {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+/* Word hover states for non-clicked state */
+.crossword:not([class*="-clicked"]) .lucascorrea:hover ~ .lucascorrea,
+.crossword:not([class*="-clicked"]) .lucascorrea:has(~ .lucascorrea:hover) {
+  opacity: 1 !important;
+}
+
+.crossword:not([class*="-clicked"]) .sobre:hover ~ .sobre,
+.crossword:not([class*="-clicked"]) .sobre:has(~ .sobre:hover) {
+  opacity: 1 !important;
+}
+
+.crossword:not([class*="-clicked"]) .projeto:hover ~ .projeto,
+.crossword:not([class*="-clicked"]) .projeto:has(~ .projeto:hover) {
+  opacity: 1 !important;
+}
+
+/* General hover state */
+.crossword:not([class*="-clicked"]) .cell:hover ~ .cell,
+.crossword:not([class*="-clicked"]) .cell:has(~ .cell:hover) {
   opacity: 0.1;
 }
 
-/* Word hover states */
-.lucascorrea:hover ~ .lucascorrea,
-.lucascorrea:has(~ .lucascorrea:hover) {
-  opacity: 1 !important;
-}
-
-.sobre:hover ~ .sobre,
-.sobre:has(~ .sobre:hover) {
-  opacity: 1 !important;
-}
-
-.projeto:hover ~ .projeto,
-.projeto:has(~ .projeto:hover) {
-  opacity: 1 !important;
-}
-
-.cell:hover {
+.cell:not(.inactive):hover {
   opacity: 1 !important;
   cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* Inactive state */
+.cell.inactive {
+  pointer-events: none;
+}
+
+/* Clicked states for all words */
+.lucas-clicked .cell:not(.lucascorrea),
+.sobre-clicked .cell:not(.sobre),
+.projeto-clicked .cell:not(.projeto) {
+  opacity: 0 !important;
+  transform: scale(0.95);
+}
+
+.lucas-clicked .lucascorrea,
+.sobre-clicked .sobre,
+.projeto-clicked .projeto {
+  opacity: 1 !important;
+  transform: scale(1.05);
 }
