@@ -21,7 +21,8 @@ const modelConfigs = [
   {
     path: '/portfolio-crossword/lcs_chrome.glb',
     wireframe: false,
-    position: { x: 0, y: 0, z: 0 },
+    position: { x: 0, y: 0, z: 3 },
+    rotation: { x: Math.PI , y: Math.PI , z: 0 },
     // Third model moves perpendicular to mouse with low sensitivity
     animationModifier: {
       rotationFactor: 0.03,
@@ -71,9 +72,12 @@ function ThreeViewer() {
     mountRef.current.appendChild(renderer.domElement);
 
     // Lighting setup
-    const ambientLight = new THREE.AmbientLight(0xffffff, 100);
+    const rightLight = new THREE.PointLight(0xffff00, 1, 1800);
+    rightLight.position.set(10, 10, 20);
+    scene.add(rightLight);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1100);
     scene.add(ambientLight);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 100);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1010);
     directionalLight.position.set(10, 10, 10);
     scene.add(directionalLight);
 

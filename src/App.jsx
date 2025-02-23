@@ -233,8 +233,8 @@ function App() {
             <a href="https://openprocessing.org/user/269230" target="_blank" rel="noopener noreferrer">
               OpenProcessing
             </a>
-            <a href="https://instagram.com/lu________cas/" target="_blank" rel="noopener noreferrer">
-              Instagram
+            <a href="https://www.linkedin.com/in/santos-lucasc/" target="_blank" rel="noopener noreferrer">
+              LinkedIn
             </a>
           </div>
           <div className="about-content">
