@@ -34,15 +34,11 @@ function App() {
             zIndex: 1,
           }}
         >
-          <ThreeViewer modelPaths={[
-            '/portfolio-crossword/lcs_wire.glb',
-            '/portfolio-crossword/lcs_green.glb',
-            '/portfolio-crossword/lcs_chrome.glb'
-          ]} />
+          <ThreeViewer />
         </div>
       )}
 
-      {/* Crossword grid and overlays rendered above the 3D canvas */}
+      {/* Rest of the App.jsx content remains the same */}
       <div
         className={`crossword ${activeWord ? `${activeWord}-clicked` : ''}`}
         style={{ position: 'relative', zIndex: 2 }}
@@ -222,14 +218,13 @@ function App() {
           O
         </div>
 
-        {/* Text container for LUCAS CORREA extra info */}
+        {/* Text containers */}
         <div className={`hover-text lucascorrea-text ${activeWord === 'lucas' ? 'visible' : ''}`}>
           Designer de 27 anos que mora<br />
           atualmente no Rio de Janeiro e fez<br />
           esse site.
         </div>
 
-        {/* Separate hover text container for SOBRE info */}
         <div className={`hover-text sobre-text ${activeWord === 'sobre' ? 'visible' : ''}`}>
           <div className="social-links">
             <a href="https://www.behance.net/santos-lucasc" target="_blank" rel="noopener noreferrer">
@@ -264,9 +259,18 @@ function App() {
           </div>
         </div>
 
-        {/* The PROJETO hover text container for any additional overlay content */}
         <div className={`hover-text projeto-text ${activeWord === 'projeto' ? 'visible' : ''}`}>
-          {/* Additional PROJETO overlay content (if any) can go here */}
+          <div className="about-content">
+            <p>
+              Parte do projeto da minha identidade visual pessoal passou pela criação e implementação de modelos 3D, 
+              tais modelos foram criados com o intuito de representar diferentes aspectos do processo, além de serem
+              uma forma de expandir meu conhecimento. 
+              Futuramente desejo de imprimir chaveiros com as marcas criadas.
+              <p>
+              Ferramentas: Blender e Three.Js
+              </p>
+            </p>
+          </div>
         </div>
       </div>
     </div>
