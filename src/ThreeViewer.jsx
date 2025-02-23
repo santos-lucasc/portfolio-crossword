@@ -20,12 +20,17 @@ const modelConfigs = [
   },
   {
     path: '/portfolio-crossword/lcs_chrome.glb',
+    material: new THREE.MeshStandardMaterial({
+      color: 0xffffff,
+      metalness: 1,
+      roughness: 0.2
+    }),
     wireframe: false,
     position: { x: 0, y: 0, z: 3 },
-    rotation: { x: Math.PI , y: Math.PI , z: 0 },
+    rotation: { x: 0 , y: 0, z: 0 },
     // Third model moves perpendicular to mouse with low sensitivity
     animationModifier: {
-      rotationFactor: 0.03,
+      rotationFactor: 0.7,
       mouseFactor: -0.75,
       autoRotation: 0.003,
       phase: Math.PI // 180 degrees out of phase
